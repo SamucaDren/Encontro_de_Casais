@@ -265,13 +265,15 @@ main {
   grid-column-start: 2;
   grid-column-end: 12;
   height: fit-content;
+  position: relative;
   justify-content: center;
   align-items: center;
 }
 
 .PlayIcon {
-  position: relative;
-  z-index: 1;
+  position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
