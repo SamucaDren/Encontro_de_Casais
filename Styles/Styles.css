@@ -33,8 +33,67 @@
 .Branca {
   color: var(--Neutro100B);
 }
+
+/* MAGENTA BASE */
+.Magenta40B {
+  color: var(--Magenta40B);
+}
+.Magenta50B {
+  color: var(--Magenta50B);
+}
+.Magenta60B {
+  color: var(--Magenta60B);
+}
+.Magenta70B {
+  color: var(--Magenta70B);
+}
+.Magenta80B {
+  color: var(--Magenta80B);
+}
+.Magenta90B {
+  color: var(--Magenta90B);
+}
+
+/* MAGENTA SUAVE */
+.Magenta60S {
+  color: var(--Magenta60S);
+}
+.Magenta40S {
+  color: var(--Magenta40S);
+}
+.Magenta30S {
+  color: var(--Magenta30S);
+}
+
 .Magenta20S {
   color: var(--Magenta20S);
+}
+
+.Magenta10S {
+  color: var(--Magenta10S);
+}
+
+/* NEUTROS */
+.Neutro20B {
+  color: var(--Neutro20B);
+}
+.Neutro40B {
+  color: var(--Neutro40B);
+}
+.Neutro50B {
+  color: var(--Neutro50B);
+}
+.Neutro60B {
+  color: var(--Neutro60B);
+}
+.Neutro70B {
+  color: var(--Neutro70B);
+}
+.Neutro80B {
+  color: var(--Neutro80B);
+}
+.Neutro90B {
+  color: var(--Neutro90B);
 }
 
 /* CLASSES PRINCIPAIS*/
@@ -142,7 +201,7 @@ main {
   width: 100%;
   height: 464px;
   border-radius: 16px;
-  background-color: var(--CorSecundario);
+  background-color: var(--CorSecundaria);
 }
 .img_Hero {
   position: absolute;
