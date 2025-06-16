@@ -1,8 +1,8 @@
 :root {
-  --CorPrincipal: #fe5a7b;
+  --CorPrincipal: #fe3351;
   --CorSecundaria: #150050;
 
-  --Magenta40B: #660a1d;
+  --Magenta40B: #660015;
   --Magenta50B: #80001a;
   --Magenta60B: #991f37;
   --Magenta70B: #b2364f;
@@ -171,7 +171,7 @@ main {
   grid-column-end: 7;
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 40px;
   height: auto;
   justify-content: center;
 }
@@ -257,7 +257,7 @@ main {
   grid-column-end: 12;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   height: auto;
   justify-content: center;
   align-items: center;
