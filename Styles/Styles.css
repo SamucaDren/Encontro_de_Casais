@@ -287,12 +287,12 @@ main {
 /*---------------------------------------------*/
 @media (max-width: 768px) {
   h1 {
-    font-size: 38px;
+    font-size: 36px;
     font-weight: bold;
   }
 
   .subH1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   h2 {
@@ -301,6 +301,18 @@ main {
 
   .hat {
     font-size: 14px;
+  }
+
+  .btnCTA {
+    background-color: var(--CorSecundaria);
+    padding: 24px 48px;
+    color: var(--Neutro100B);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px 16px;
+    text-decoration: none;
+    height: fit-content;
+    width: fit-content;
   }
 
   .grid {
