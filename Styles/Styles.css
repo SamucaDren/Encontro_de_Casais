@@ -286,6 +286,11 @@ main {
 
 /*---------------------------------------------*/
 @media (max-width: 768px) {
+  main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   h1 {
     font-size: 36px;
     font-weight: bold;
@@ -305,11 +310,11 @@ main {
 
   .btnCTA {
     background-color: var(--CorSecundaria);
-    padding: 24px 48px;
+    padding: 16px 24px;
     color: var(--Neutro100B);
     font-size: 18px;
     font-weight: bold;
-    border-radius: 8px 16px;
+    border-radius: 16px;
     text-decoration: none;
     height: fit-content;
     width: fit-content;
