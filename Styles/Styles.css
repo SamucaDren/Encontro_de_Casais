@@ -286,14 +286,26 @@ main {
 
 /*---------------------------------------------*/
 @media (max-width: 768px) {
+  h1 {
+    font-size: 38px;
+    font-weight: bold;
+  }
+
+  .subH1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .hat {
+    font-size: 14px;
+  }
+
   .grid {
-    height: fit-content;
     width: 100%;
-    display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
-    padding-inline: 24px;
-    row-gap: 52px;
   }
 
   .tit {
