@@ -222,15 +222,15 @@ main {
 }
 
 .ponto {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--Magenta60B);
   transition: background-color 0.3s ease;
 }
 
 .ponto.ativo {
-  background-color: white;
+  background-color: var(--Magenta10S);
 }
 
 .gradiente_hero {
@@ -249,25 +249,39 @@ main {
 .linha_sec {
   position: absolute;
   background-color: var(--Magenta10S);
-  margin: 0px;
-  flex: 1;
-  gap: 8px;
   height: 64px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  transform: rotate(-1deg);
-  transform: translateY(-20px);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  /* junta as duas transformações */
+  transform: rotate(-1deg) translateY(-20px);
 }
 
+.scroll_wrapper {
+  display: inline-flex;
+  width: max-content; /* garante largura do conteúdo */
+  animation: mover 20s linear infinite;
+}
 .tx_line {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
+  margin-right: 12px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /*SESSÃO #02 - VÍDEO --------------------------------------------------------------------------------------------------------------------------------*/
