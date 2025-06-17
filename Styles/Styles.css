@@ -321,7 +321,6 @@ main {
   justify-items: center;
   overflow: hidden;
   border-radius: 16px;
-  aspect-ratio: 4 / 3;
 }
 
 .image_video:hover .capa_video {
@@ -429,6 +428,7 @@ main {
     position: relative;
     grid-column-start: 1;
     grid-column-end: 7;
+    aspect-ratio: 1.2/1;
   }
 
   .tx_line {
@@ -442,6 +442,7 @@ main {
   .image_video {
     grid-column-start: 1;
     grid-column-end: 7;
+    aspect-ratio: 4 / 3;
   }
 
   .PlayIcon {
