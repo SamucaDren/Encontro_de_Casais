@@ -194,6 +194,11 @@ main {
   aspect-ratio: 3 / 3.5;
   overflow: hidden;
   border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.imgs_container:hover {
+  transform: rotate(-4deg);
 }
 
 .bg_img {
@@ -315,10 +320,8 @@ main {
   position: relative;
   justify-content: center;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
   border-radius: 16px;
-  aspect-ratio: 4/3;
 }
 
 .image_video:hover .capa_video {
@@ -326,12 +329,15 @@ main {
 }
 
 .capa_video {
-  height: 100%;
-  transition: 0.2s linear;
+  width: 100%;
+  transition: transform 0.4s ease; /* Aqui é o lugar certo */
+  display: block;
+  object-fit: cover;
 }
 
 .PlayIcon {
   position: absolute;
+  height: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -339,19 +345,23 @@ main {
 }
 
 .modal {
-  display: none;
+  display: none; /* isso é essencial */
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#videoModal {
+  display: none;
 }
 
 .modal_content {
   position: relative;
   background: #000;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
   max-width: 90vw;

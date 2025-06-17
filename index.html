@@ -96,7 +96,9 @@
     <!-- Modal -->
     <div id="videoModal" class="modal">
       <div class="modal_content">
-        <span id="closeModal" class="close">&times;</span>
+        <span id="closeModal" onclick="fechaModal()" class="close"
+          >&times;</span
+        >
         <iframe
           id="youtubeVideo"
           width="800"
@@ -147,27 +149,28 @@
   </script>
 
   <script>
-    const modal = document.getElementById("videoModal");
-    const videoTrigger = document.querySelector(".image_video");
-    const closeModal = document.getElementById("closeModal");
-    const youtubeVideo = document.getElementById("youtubeVideo");
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("videoModal");
+      const youtubeVideo = document.getElementById("youtubeVideo");
+      const closeModal = document.getElementById("closeModal");
+      const videoTrigger = document.querySelector(".image_video");
 
-    videoTrigger.addEventListener("click", () => {
-      youtubeVideo.src =
-        "https://www.youtube.com/embed/KAuggtur2mI?autoplay=1&rel=0";
-      modal.style.display = "flex";
-    });
-
-    closeModal.addEventListener("click", () => {
-      modal.style.display = "none";
-      youtubeVideo.src = "";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-        youtubeVideo.src = "";
+      // Função para abrir o modal
+      function abreModal() {
+        youtubeVideo.src =
+          "https://www.youtube.com/embed/KAuggtur2mI?autoplay=1&rel=0";
+        modal.style.display = "flex";
       }
+
+      // Função para fechar o modal
+      function fechaModal() {
+        modal.style.display = "none";
+        youtubeVideo.src = ""; // limpa o vídeo pra parar a reprodução
+      }
+
+      // Evento de clique para abrir e fechar
+      videoTrigger.addEventListener("click", abreModal);
+      closeModal.addEventListener("click", fechaModal);
     });
   </script>
 </html>
