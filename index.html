@@ -33,8 +33,15 @@
           >
         </div>
         <div class="imgs_container">
-          <img class="img_Hero" src="imgs/imgTeste.png" />
-          <div class="caixaAzul"></div>
+          <div class="bg_img bg1"></div>
+          <div class="bg_img bg2"></div>
+          <div class="gradiente_hero"></div>
+
+          <div class="pontos">
+            <span class="ponto ativo"></span>
+            <span class="ponto"></span>
+            <span class="ponto"></span>
+          </div>
         </div>
       </div>
     </main>
@@ -75,4 +82,40 @@
       </div>
     </section>
   </body>
+  <script>
+    const imagens = ["01.png", "02.png", "03.png"];
+    const bg1 = document.querySelector(".bg1");
+    const bg2 = document.querySelector(".bg2");
+    const pontos = document.querySelectorAll(".ponto");
+
+    let index = 0;
+    let showingBg1 = true;
+
+    // Inicial
+    bg1.style.backgroundImage = `url('imgs/Hero_Main/${imagens[index]}')`;
+    bg1.classList.add("active");
+    pontos[index].classList.add("ativo");
+
+    setInterval(() => {
+      // Atualiza índice
+      index = (index + 1) % imagens.length;
+      const nextImage = `url('imgs/Hero_Main/${imagens[index]}')`;
+
+      // Alterna background
+      if (showingBg1) {
+        bg2.style.backgroundImage = nextImage;
+        bg2.classList.add("active");
+        bg1.classList.remove("active");
+      } else {
+        bg1.style.backgroundImage = nextImage;
+        bg1.classList.add("active");
+        bg2.classList.remove("active");
+      }
+      showingBg1 = !showingBg1;
+
+      // Atualiza pontos
+      pontos.forEach((p) => p.classList.remove("ativo"));
+      pontos[index].classList.add("ativo");
+    }, 2000);
+  </script>
 </html>

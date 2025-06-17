@@ -191,27 +191,58 @@ main {
   position: relative;
   grid-column-start: 8;
   grid-column-end: 13;
-  height: 570px;
-  align-items: center;
+  aspect-ratio: 3 / 3.5;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-.caixaAzul {
+.bg_img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 464px;
-  border-radius: 16px;
-  background-color: var(--CorSecundaria);
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
-.img_Hero {
+
+.bg_img.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+.pontos {
   position: absolute;
-  top: 50%;
+  bottom: 12px;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-4deg);
-  height: 560px;
-  z-index: 1;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.ponto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.ponto.ativo {
+  background-color: white;
+}
+
+.gradiente_hero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(128, 0, 26, 0),
+    rgba(128, 0, 26, 1)
+  ); /* ou com cores diferentes */
 }
 
 /*SESSÃO #01.1 - FAÇA SUA PRÉ-INSCRIÇÃO --------------------------------------------------------------------------------------------------------------------------------*/
@@ -309,15 +340,9 @@ main {
   }
 
   .btnCTA {
-    background-color: var(--CorSecundaria);
-    padding: 16px 24px;
-    color: var(--Neutro100B);
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 16px;
-    text-decoration: none;
-    height: fit-content;
-    width: fit-content;
+    padding: 24px 24px;
+    font-size: 16px;
+    border-radius: 12px;
   }
 
   .grid {
@@ -340,6 +365,10 @@ main {
     position: relative;
     grid-column-start: 1;
     grid-column-end: 7;
+  }
+
+  .tx_line {
+    font-size: 12px;
   }
 
   .tit_h2 {
