@@ -397,6 +397,20 @@ main {
   width: 100%;
 }
 
+/*SESSÃO #03 - VÍDEO --------------------------------------------------------------------------------------------------------------------------------*/
+
+.sec_participacoes {
+  background-color: var(--Magenta10S);
+  margin: 0px;
+  flex: 1;
+  height: fit-content;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
 /*---------------------------------------------*/
 @media (max-width: 768px) {
   main {
