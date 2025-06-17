@@ -166,6 +166,15 @@ main {
   align-items: center;
 }
 
+.Tema {
+  position: absolute;
+  z-index: 3;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 40px;
+}
+
 .tit {
   grid-column-start: 1;
   grid-column-end: 7;
@@ -189,6 +198,9 @@ main {
 }
 .imgs_container {
   position: relative;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
   grid-column-start: 8;
   grid-column-end: 13;
   aspect-ratio: 3 / 3.5;
@@ -209,6 +221,7 @@ main {
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1s ease;
+  z-index: 0;
 }
 
 .bg_img.active {
@@ -242,11 +255,11 @@ main {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(128, 0, 26, 0),
-    rgba(128, 0, 26, 1)
+    rgba(128, 0, 26, 0) 0%,
+    rgba(128, 0, 26, 1) 100%
   ); /* ou com cores diferentes */
 }
 
@@ -434,7 +447,7 @@ main {
     position: relative;
     grid-column-start: 1;
     grid-column-end: 7;
-    aspect-ratio: 1.2/1;
+    aspect-ratio: 1/1;
   }
 
   .tx_line {
